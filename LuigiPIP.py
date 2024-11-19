@@ -110,13 +110,8 @@ class RunExternalScript(luigi.Task):
     def requires(self):
         return OrganizeAndProcessFiles(self.url, self.output_dir)
 
-    def output(self):
-        return luigi.LocalTarget(os.path.join(self.output_dir, 'final_output'))
-
     def run(self):
         processed_dir = self.input().path
-        final_output_dir = self.output().path
-        os.makedirs(final_output_dir, exist_ok=True)
 
         script_name = 'to_tabs.py'
 
