@@ -1,3 +1,4 @@
+# для запуска - python3 LuigiPIP.py RunExternalScript --url "https://www.ncbi.nlm.nih.gov/geo/download/?acc=GSE68849&format=file" --output-dir data --local-scheduler
 import luigi
 import requests
 import tarfile
